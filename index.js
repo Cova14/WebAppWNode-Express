@@ -1,12 +1,14 @@
-var express = require('express');
-var chalk = require('chalk');
-var debug = require('debug')('index');
-var morgan = require('morgan');
-var path = require('path')
+const express = require('express');
+const chalk = require('chalk');
+const debug = require('debug')('index');
+const morgan = require('morgan');
+const path = require('path');
 
-var app = express();
+const app = express();
 
 app.use(morgan('tiny'));
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/index.html'));

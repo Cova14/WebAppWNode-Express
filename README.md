@@ -1,1 +1,1 @@
-Starting commit
+If you are on Linux or Mac, just run "npm start", otherwise, if you are on Windows, run "npm run win-start"
